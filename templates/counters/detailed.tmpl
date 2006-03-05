@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!--
+  Copyright (c) 2005-2006, Carlos Rodrigues <cefrodrigues@mail.telepac.pt>
+  
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License (version 2) as
+  published by the Free Software Foundation.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+-->
+
+#from templates.skeleton import skeleton
+#extends skeleton
+
+#def body
+    <h3>Last Day</h3>
+    <div class="graph">
+        <img src="graph-$kind-1day.png" alt="daily $kind graph"/>
+    </div>
+    <h3>Last Week</h3>
+    <div class="graph">
+        <img src="graph-$kind-1week.png" alt="weekly $kind graph"/>
+    </div>
+    <h3>Last Month</h3>
+    <div class="graph">
+        <img src="graph-$kind-1month.png" alt="monthly $kind graph"/>
+    </div>
+    <h3>Last Year</h3>
+    <div class="graph">
+        <img src="graph-$kind-1year.png" alt="yearly $kind graph"/>
+    </div>
+#end def

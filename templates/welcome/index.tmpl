@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!--
+  Copyright (c) 2005-2006, Carlos Rodrigues <cefrodrigues@mail.telepac.pt>
+  
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License (version 2) as
+  published by the Free Software Foundation.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+-->
+
+#from templates.skeleton import skeleton
+#extends skeleton
+
+#def body
+    <div class="message">
+        System has been up for <strong>$uptime</strong>.
+    </div>
+    <h3>The following statistics components are currently available:</h3>
+    <ul>
+        #for $name, $title, $description in $components:
+            <li><a href="$name">$title</a> - $description</li>
+        #end for
+    </ul>
+#end def
