@@ -1,7 +1,14 @@
 .SUFFIXES: .py .tmpl
 
+
+DESTDIR = /opt/quicklook
+OWNER = root
+GROUP = root
+
+
 CHEETAH = cheetah
 CHEETAH_FLAGS = --nobackup
+
 
 TEMPLATES = templates/processes/index.tmpl \
             templates/processes/load.tmpl \
@@ -19,10 +26,18 @@ TEMPLATES = templates/processes/index.tmpl \
 PAGES := $(patsubst %.tmpl, %.py, $(TEMPLATES))
 
 
-all: $(PAGES)
-
 .tmpl.py:
 	$(CHEETAH) compile $(CHEETAH_FLAGS) $<
+
+all: $(PAGES)
+
+install: $(PAGES)
+	install -m 0755 -o $(OWNER) -g $(GROUP) -d $(DESTDIR)
+	install -m 0755 -o $(OWNER) -g $(GROUP) stats.py $(DESTDIR)
+	install -m 0755 -o $(OWNER) -g $(GROUP) -d $(DESTDIR)/templates
+	find templates -name '*.py' | xargs -i install -m 0644 -o $(OWNER) -g $(GROUP) -D {} $(DESTDIR)/{}
+	install -m 0755 -d $(DESTDIR)/components
+	find components -name '*.py' | xargs -i install -m 0644 -o $(OWNER) -g $(GROUP) -D {} $(DESTDIR)/{}
 
 clean:
 	rm -f $(PAGES)

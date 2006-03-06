@@ -24,7 +24,7 @@
 
 
 NAME="Quick Look"
-VERSION="1.0rc1"
+VERSION="1.0"
 
 
 import sys
