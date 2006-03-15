@@ -41,7 +41,40 @@ def print_usage():
                      " --output=<output directory>" \
                      " [--refresh=<minutes>]" \
                      " [--verbose]" \
-                     "\n" % os.path.basename(sys.argv[0]))
+                     "\n\n" % os.path.basename(sys.argv[0]))
+                     
+    sys.stdout.write("--data=<data directory>\n\tThe place where" \
+                     " the data files will be stored. It will be" \
+                     " created if\n\tit doesn't exist.\n\n")
+                     
+    sys.stdout.write("--output=<output directory>\n\tThe graphs" \
+                     " and the HTML pages will be generated into" \
+                     " this directory.\n\tIt will be created if it" \
+                     " doesn't exist.\n\n")
+
+    sys.stdout.write("--refresh=<minutes> (optional)\n\tData should be collected" \
+                     " at \"minutes\" intervals. For instance, if you\n\tset" \
+                     " a cron job to run this program every 10 minutes," \
+                     " you must specify\n\t\"--refresh=10\". Whatever value" \
+                     " you choose the first time you run this\n\tprogram, you" \
+                     " must stick with it unless you delete the data files"
+                     " and\n\tstart over.\n"
+                     "\tSo, if you don't have a strong reason to do otherwise," \
+                     " just stick with\n\tthe default value of %d minutes (by" \
+                     " omitting this option).\n\n" % (properties["refresh"] / 60))
+                     
+    sys.stdout.write("--verbose (optional)\n\tThis program doesn't print any" \
+                     " messages unless they are clearly errors.\n\tThis means that" \
+                     " no error is printed if a particular component isn't\n\tloaded" \
+                     " and that is something to be expected on some setups. As an\n\t" \
+                     "example, if the (kernel) module \"ip_conntrack\" isn't loaded, no\n\t" \
+                     "network connection statistics can be collected, but this is" \
+                     " normal if\n\tthere is no active firewall on the machine.\n" \
+                     "\tThis flag makes this program print these types of messages," \
+                     " and it is\n\trecommended to use it at least once to see if" \
+                     " everything is being\n\tloaded (or not).\n\n")
+                     
+    sys.stdout.write("* %s v%s\n\n" % (NAME, VERSION))
 
 
 def process_cmdline():
