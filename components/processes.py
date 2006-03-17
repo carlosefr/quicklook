@@ -26,7 +26,7 @@
 import os
 import rrdtool
 
-from components.common import *
+from common import *
 
 from templates.processes.index import index as OverviewPage
 from templates.processes.load import load as LoadAveragePage

@@ -28,7 +28,7 @@ import os
 import re
 import rrdtool
 
-from components.common import *
+from common import *
 
 from templates.counters.index import index as OverviewPage
 from templates.counters.detailed import detailed as DetailsPage
