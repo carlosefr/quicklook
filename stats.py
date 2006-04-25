@@ -42,7 +42,7 @@ def print_usage():
                      " [--refresh=<minutes>]" \
                      " [--verbose]" \
                      "\n\n" % os.path.basename(sys.argv[0]))
-                     
+
     sys.stdout.write("--data=<data directory>\n\tThe place where" \
                      " the data files will be stored. It will be" \
                      " created if\n\tit doesn't exist.\n\n")
@@ -62,7 +62,7 @@ def print_usage():
                      "\tSo, if you don't have a strong reason to do otherwise," \
                      " just stick with\n\tthe default value of %d minutes (by" \
                      " omitting this option).\n\n" % (properties["refresh"] / 60))
-                     
+
     sys.stdout.write("--verbose (optional)\n\tThis program doesn't print any" \
                      " messages unless they are clearly errors.\n\tThis means that" \
                      " no error is printed if a particular component isn't\n\tloaded" \
@@ -89,7 +89,7 @@ def process_cmdline():
     for option, value in options:
         if option in ("-v", "--verbose"):
             properties["verbose"] = True
-        if option in ("-d", "--data"):
+        elif option in ("-d", "--data"):
             properties["data"] = os.path.normpath(value)
             data = True
         elif option in ("-o", "--output"):
@@ -100,7 +100,7 @@ def process_cmdline():
                 properties["refresh"] = int(value) * 60
             except ValueError, e:
                 raise StatsError("refresh must be a numeric value")
-                
+
     if not data or not output:
         raise StatsError("not enough parameters")
 
@@ -117,8 +117,8 @@ def load_components():
             pass
 
     return components
-  
-    
+
+
 if __name__ == "__main__":
     try:
         process_cmdline()
@@ -126,7 +126,7 @@ if __name__ == "__main__":
         sys.stderr.write("Error: " + str(e) + "\n")
         print_usage()
         sys.exit(1)
-        
+
     components = load_components()
     if len(components) == 0:
         sys.stderr.write("Error: no components could be loaded.")
@@ -135,7 +135,7 @@ if __name__ == "__main__":
     welcome = Welcome(components)
     welcome.update()
     welcome.make_html()
-    
+
     for component in components:
         component.update()
         component.make_graphs()
