@@ -40,8 +40,8 @@ To install QuickLook into "/opt/quicklook", just run the following commands:
 
 By default, data files are stored in "/var/opt/quicklook" and webpages are
 generated into the "/var/www/quicklook" directory. If you wish to make changes
-to the output directories, or you chose a different installation directory, edit
-the "stats.cron" file before copying it.
+to the output directories, or you chose a different installation directory,
+edit the "stats.cron" file before copying it.
 
 QuickLook will now collect data and generate webpages every five minutes. No
 other steps are needed, but you can always run "stats.py" without parameters to
