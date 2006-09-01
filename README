@@ -1,15 +1,15 @@
-QuickLook
----------
+Quick Look
+----------
 
 What is it?
 -----------
 
-QuickLook is a package to collect system statistics and output pretty graphics
+Quick Look is a package to collect system statistics and output pretty graphics
 and (X)HTML pages. It allows system administrators to have a quick look on the
 status of their systems, without going for a more advanced (and heavier)
 solution.
 
-QuickLook currently shows...
+Quick Look currently shows...
 
   * CPU and memory usage
   * Load average and process spawning rates
@@ -33,7 +33,7 @@ Older versions of any of these packages may work, but haven't been tested.
 Installation
 ------------
 
-To install QuickLook into "/opt/quicklook", just run the following commands:
+To install Quick Look into "/opt/quicklook", just run the following commands:
 
     make DESTDIR=/opt/quicklook install
     cp extras/stats.cron /etc/cron.d/stats
@@ -43,7 +43,7 @@ generated into the "/var/www/quicklook" directory. If you wish to make changes
 to the output directories, or you chose a different installation directory,
 edit the "stats.cron" file before copying it.
 
-QuickLook will now collect data and generate webpages every five minutes. No
+Quick Look will now collect data and generate webpages every five minutes. No
 other steps are needed, but you can always run "stats.py" without parameters to
 check out the options available.
 
