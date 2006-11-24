@@ -164,12 +164,12 @@ class MemoryUsage(StatsComponent):
                           "GPRINT:cached_mb:LAST:\\: %6.0lf MB (now)",
                           "GPRINT:cached_mb:MAX:%6.0lf MB (max)",
                           "GPRINT:cached_mb:AVERAGE:%6.0lf MB (avg)",
-                          "COMMENT:        Total Memory  =  %.0f MB\\n" % (float(self.memory) / 1024),
+                          "COMMENT:        Memory  =  %.0f MB\\n" % (float(self.memory) / 1024),
                           "LINE2:swapused#4169e1:Swap   ",
                           "GPRINT:swapused_mb:LAST:\\: %6.0lf MB (now)",
                           "GPRINT:swapused_mb:MAX:%6.0lf MB (max)",
                           "GPRINT:swapused_mb:AVERAGE:%6.0lf MB (avg)",
-                          "COMMENT:        Total Swap    =  %.0f MB" % (float(self.swap) / 1024))
+                          "COMMENT:        Swap    =  %.0f MB" % (float(self.swap) / 1024))
 
     def make_html(self):
         """Generate the HTML pages."""
