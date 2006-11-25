@@ -131,7 +131,7 @@ class NetworkConnections(StatsComponent):
                           "DEF:proto_tcp=%s:proto_tcp:AVERAGE" % self.database,
                           "DEF:proto_udp=%s:proto_udp:AVERAGE" % self.database,
                           "DEF:proto_other=%s:proto_other:AVERAGE" % self.database,
-                          "AREA:proto_tcp#32cd32:TCP  ",
+                          "AREA:proto_tcp#a0df05:TCP  ",
                           "GPRINT:proto_tcp:LAST:\\: %6.0lf conn (now)",
                           "GPRINT:proto_tcp:MAX:%6.0lf conn (max)",
                           "GPRINT:proto_tcp:AVERAGE:%6.0lf conn (avg)\\n",

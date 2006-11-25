@@ -138,7 +138,7 @@ class CPUUsage(StatsComponent):
                           "DEF:user=%s:user:AVERAGE" % self.database,
                           "DEF:system=%s:system:AVERAGE" % self.database,
                           "DEF:nice=%s:nice:AVERAGE" % self.database,
-                          "AREA:user#32cd32:User  ",
+                          "AREA:user#a0df05:User  ",
                           "GPRINT:user:LAST:\\: %6.1lf%% (now)",
                           "GPRINT:user:MAX:%6.1lf%% (max)",
                           "GPRINT:user:AVERAGE:%6.1lf%% (avg)\\n",

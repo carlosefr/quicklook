@@ -122,7 +122,7 @@ class Processes(StatsComponent):
                           "--color", "SHADEA%s" % border,
                           "--color", "SHADEB%s" % border,
                           "DEF:avg_5min=%s:avg_5min:AVERAGE" % self.database,
-                          "AREA:avg_5min#32cd32:5 min average",
+                          "AREA:avg_5min#a0df05:5 min average",
                           "GPRINT:avg_5min:LAST:\\: %6.2lf proc (now)",
                           "GPRINT:avg_5min:MAX:%6.2lf proc (max)",
                           "GPRINT:avg_5min:AVERAGE:%6.2lf proc (avg)")
@@ -144,7 +144,7 @@ class Processes(StatsComponent):
                           "--color", "SHADEA%s" % background,
                           "--color", "SHADEB%s" % background,
                           "DEF:proc=%s:proc:AVERAGE" % self.database,
-                          "AREA:proc#32cd32:processes",
+                          "AREA:proc#a0df05:processes",
                           "GPRINT:proc:LAST:\\: %6.2lf forks/sec (now)",
                           "GPRINT:proc:MAX:%6.2lf forks/sec (max)",
                           "GPRINT:proc:AVERAGE:%6.2lf forks/sec (avg)")

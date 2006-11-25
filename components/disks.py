@@ -222,11 +222,11 @@ class Disk(object):
                           "--color", "SHADEB%s" % border,
                           "DEF:reads=%s:sector_reads:AVERAGE" % self.database,
                           "DEF:writes=%s:sector_writes:AVERAGE" % self.database,
-                          "AREA:reads#32cd32:Reads ",
+                          "AREA:reads#a0df05:Reads ",
                           "GPRINT:reads:LAST:\\: %9.1lf op/sec (now)",
                           "GPRINT:reads:MAX:%9.1lf op/sec (max)",
                           "GPRINT:reads:AVERAGE:%9.1lf op/sec (avg)\\n",
-                          "LINE2:writes#4169e1:Writes",
+                          "LINE1:writes#808080:Writes",
                           "GPRINT:writes:LAST:\\: %9.1lf op/sec (now)",
                           "GPRINT:writes:MAX:%9.1lf op/sec (max)",
                           "GPRINT:writes:AVERAGE:%9.1lf op/sec (avg)")
