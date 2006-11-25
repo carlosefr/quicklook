@@ -24,7 +24,7 @@
 
 
 NAME="Quick Look"
-VERSION="1.0a"
+VERSION="1.0.1"
 
 
 import sys
@@ -111,6 +111,7 @@ def template_fill(template, description, is_toplevel=False):
     template.time = strftime("%B %d, %Y - %H:%M:%S", localtime(time()))
     template.description = description
     template.is_toplevel = is_toplevel
+    template.refresh = properties["refresh"]
 
 
 def template_write(template, filename):
