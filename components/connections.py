@@ -26,7 +26,7 @@
 import os
 import rrdtool
 
-from common import *
+from components.common import *
 from templates.connections.index import index as ConnectionsPage
 
 

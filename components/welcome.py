@@ -25,7 +25,7 @@
 
 import os
 
-from common import *
+from components.common import *
 from templates.welcome.index import index as WelcomePage
 
 

@@ -27,7 +27,7 @@ import os
 import rrdtool
 import re
 
-from common import *
+from components.common import *
 from templates.cpu.index import index as CPUPage
 
 

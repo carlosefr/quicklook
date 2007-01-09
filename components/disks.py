@@ -27,7 +27,7 @@ import os
 import re
 import rrdtool
 
-from common import *
+from components.common import *
 
 from templates.disks.index import index as OverviewPage
 from templates.disks.detailed import detailed as DetailsPage
