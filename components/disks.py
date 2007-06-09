@@ -77,7 +77,7 @@ class DiskStats(StatsComponent):
         return (self.name, self.title, self.description)
 
     def _register_disk(self, disk_name):
-        if self.disks.has_key(disk_name):
+        if disk_name in self.disks:
             disk = self.disks[disk_name]
         else:
             disk = Disk(disk_name, self.data_dir, self.graphs_dir)

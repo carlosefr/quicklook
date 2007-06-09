@@ -96,7 +96,7 @@ class NetworkCounters(StatsComponent):
             if interface_name == "lo":
                 continue
 
-            if self.interfaces.has_key(interface_name):
+            if interface_name in self.interfaces:
                 interface = self.interfaces[interface_name]
             else:
                 interface = NetworkInterface(interface_name, self.data_dir, self.graphs_dir)
