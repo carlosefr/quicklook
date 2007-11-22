@@ -101,12 +101,10 @@ class DiskStats(StatsComponent):
                 fail(self.name, "cannot parse \"%s\"." % DATA_SOURCE_OLD)
                 raise StatsException(DATA_SOURCE_OLD + ": wrong format")
             
-            disk_name = values[3]
-            
             # Disk names may appear in an hierarchical format,
             # such as "ide/host0/bus0/target0/lun0/disc", so
             # we must strip the "/"'s.
-            disk_name = disk_name.replace("/", ".")
+            disk_name = values[3].replace("/", ".")
 
             if not exclude.search(disk_name):
                 sectors_reads = int(values[6])
@@ -126,7 +124,10 @@ class DiskStats(StatsComponent):
 
         for line in f:
             values = line.split()
-            disk_name = values[2]
+
+            # Disk names may appear in an hierarchical format,
+            # such as "cciss/c0d0", so we must strip the "/"'s.
+            disk_name = values[2].replace("/", ".")
             
             if len(values) == DEV_FIELD_COUNT and not exclude.search(disk_name):
                 sectors_reads = int(values[5])
