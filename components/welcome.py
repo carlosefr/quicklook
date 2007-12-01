@@ -3,7 +3,7 @@
 # 
 # welcome.py - the welcome page (with some data)
 #
-# Copyright (c) 2006, Carlos Rodrigues <cefrodrigues@mail.telepac.pt>
+# Copyright (c) 2005-2007, Carlos Rodrigues <cefrodrigues@mail.telepac.pt>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License (version 2) as
