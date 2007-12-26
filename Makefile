@@ -20,6 +20,8 @@ TEMPLATES = templates/processes/index.tmpl \
             templates/connections/index.tmpl \
             templates/counters/index.tmpl \
             templates/counters/detailed.tmpl \
+            templates/ups/index.tmpl \
+            templates/ups/detailed.tmpl \
             templates/skeleton.tmpl \
             templates/welcome/index.tmpl
 

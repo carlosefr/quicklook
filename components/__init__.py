@@ -18,7 +18,7 @@
 #
 
 
-__all__ = ["common", "counters", "connections", "processes", "cpu", "disks", "memory", "welcome"]
+__all__ = ["common", "counters", "connections", "processes", "cpu", "disks", "memory", "ups", "welcome"]
 
 
 # EOF - __init__.py

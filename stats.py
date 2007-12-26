@@ -33,6 +33,7 @@ from components.connections import NetworkConnections
 from components.memory import MemoryUsage
 from components.cpu import CPUUsage
 from components.disks import DiskStats
+from components.ups import UPSStats
 
 
 def print_usage():
@@ -106,7 +107,7 @@ def process_cmdline():
 
         
 def load_components():
-    classes = ["CPUUsage", "MemoryUsage", "Processes", "DiskStats", "NetworkCounters", "NetworkConnections"]
+    classes = ["CPUUsage", "MemoryUsage", "Processes", "DiskStats", "NetworkCounters", "NetworkConnections", "UPSStats"]
     components = []
 
     for name in classes:
