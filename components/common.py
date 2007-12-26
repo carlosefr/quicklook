@@ -96,7 +96,7 @@ class StatsComponent(object):
 def fail(component, reason):
     """Print a reason why a component can't be loaded."""
     if properties["verbose"]:
-        sys.stderr.write("Cannot start component \"%s\": %s" % (component, reason))
+        sys.stderr.write("Cannot start component \"%s\": %s\n" % (component, reason))
         
 
 #
