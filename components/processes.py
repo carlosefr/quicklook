@@ -74,7 +74,7 @@ class Processes(StatsComponent):
                            "DS:avg_1min:GAUGE:%d:0:U" % heartbeat,
                            "DS:avg_5min:GAUGE:%d:0:U" % heartbeat,
                            "DS:avg_15min:GAUGE:%d:0:U" % heartbeat,
-                           "DS:proc:COUNTER:%d:0:U" % heartbeat,
+                           "DS:proc:DERIVE:%d:0:U" % heartbeat,
                            "RRA:AVERAGE:0.5:1:%d" % (86400 / refresh),    # 1 day of 'refresh' averages
                            "RRA:AVERAGE:0.5:%d:672" % (900 / refresh),    # 7 days of 1/4 hour averages
                            "RRA:AVERAGE:0.5:%d:744" % (3600 / refresh),   # 31 days of 1 hour averages

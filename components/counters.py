@@ -148,10 +148,10 @@ class NetworkInterface(object):
             heartbeat = refresh * 2
             rrdtool.create(self.database,
                            "--step", "%d" % refresh,
-                           "DS:rx_bytes:COUNTER:%d:0:U" % heartbeat,
-                           "DS:tx_bytes:COUNTER:%d:0:U" % heartbeat,
-                           "DS:rx_packets:COUNTER:%d:0:U" % heartbeat,
-                           "DS:tx_packets:COUNTER:%d:0:U" % heartbeat,
+                           "DS:rx_bytes:DERIVE:%d:0:U" % heartbeat,
+                           "DS:tx_bytes:DERIVE:%d:0:U" % heartbeat,
+                           "DS:rx_packets:DERIVE:%d:0:U" % heartbeat,
+                           "DS:tx_packets:DERIVE:%d:0:U" % heartbeat,
                            "RRA:AVERAGE:0.5:1:%d" % (86400 / refresh),    # 1 day of 'refresh' averages
                            "RRA:AVERAGE:0.5:%d:672" % (900 / refresh),    # 7 days of 1/4 hour averages
                            "RRA:AVERAGE:0.5:%d:744" % (3600 / refresh),   # 31 days of 1 hour averages

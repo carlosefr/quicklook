@@ -181,8 +181,8 @@ class Disk(object):
             heartbeat = refresh * 2
             rrdtool.create(self.database,
                            "--step", "%d" % refresh,
-                           "DS:sector_reads:COUNTER:%d:0:U" % heartbeat,
-                           "DS:sector_writes:COUNTER:%d:0:U" % heartbeat,
+                           "DS:sector_reads:DERIVE:%d:0:U" % heartbeat,
+                           "DS:sector_writes:DERIVE:%d:0:U" % heartbeat,
                            "RRA:AVERAGE:0.5:1:%d" % (86400 / refresh),    # 1 day of 'refresh' averages
                            "RRA:AVERAGE:0.5:%d:672" % (900 / refresh),    # 7 days of 1/4 hour averages
                            "RRA:AVERAGE:0.5:%d:744" % (3600 / refresh),   # 31 days of 1 hour averages
