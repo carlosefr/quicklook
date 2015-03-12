@@ -70,7 +70,3 @@ they can be converted with the following command:
     convert.sh /var/opt/quicklook
 
 Backup this directory first, just in case.
-
-
--- 
-Carlos Rodrigues <cefrodrigues@mail.telepac.pt>
