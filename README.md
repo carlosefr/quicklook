@@ -1,4 +1,4 @@
-> This project is no longer being maintained.
+> This project is no longer being actively maintained.
 
 Quick Look
 ==========
@@ -32,7 +32,7 @@ Older versions of any of these packages may work, but haven't been tested.
 Installation
 ============
 
-To install Quick Look into "/opt/quicklook", just run the following commands:
+To install Quick Look into `/opt/quicklook`, just run the following commands:
 
     make DESTDIR=/opt/quicklook install
     cp extras/quicklook.cron /etc/cron.d/quicklook
